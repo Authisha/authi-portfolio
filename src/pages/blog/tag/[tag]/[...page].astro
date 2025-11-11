@@ -6,15 +6,26 @@ import createSlug from "../../../../lib/createSlug";
 
 export async function getStaticPaths({ paginate }) {
   const all_posts = await getCollection("blog");
-  const all_tags = all_posts.flatMap((post) => {
-    return post.data.tags || [];
-  });
+  const all_tags = all_posts.flatMap((post) => post.data.tags || []);
 
   return all_tags.flatMap((tag) => {
-    const filtred_posts = all_posts.filter((post) => {
-      return post.data.tags?.includes(tag);
+    // TEMPORARY: ignore tag filtering
+    // const filtred_posts = all_posts.filter((post) => post.data.tags?.includes(tag));
+    const filtred_posts = all_posts
+      // ✅ Filter out drafts
+      .filter((post) => !post.data.draft);
+
+    // ✅ Sort: pinned first, then newest by date
+    const sorted_posts = filtred_posts.sort((a, b) => {
+      if (a.data.pinned && !b.data.pinned) return -1;
+      if (!a.data.pinned && b.data.pinned) return 1;
+      return (
+        new Date(b.data.pubDate).getTime() -
+        new Date(a.data.pubDate).getTime()
+      );
     });
-    return paginate(filtred_posts, {
+
+    return paginate(sorted_posts, {
       params: { tag },
       pageSize: 10,
     });
@@ -29,6 +40,7 @@ const params = Astro.params;
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Blog - {params.tag}</div>
   </div>
+
   {
     page.data.length === 0 ? (
       <div class="bg-base-200 border-l-4 border-secondary w-full p-4 min-w-full">
@@ -56,43 +68,38 @@ const params = Astro.params;
   }
 
   <div class="flex justify-between">
-    {
-      page.url.prev ? (
-        <a href={page.url.prev} class="btn btn-ghost my-10 mx-5">
-          {" "}
-          <svg
-            class="h-6 w-6 fill-current md:h-8 md:w-8"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
-          </svg>{" "}
-          Recent posts
-        </a>
-      ) : (
-        <div />
-      )
-    }
-    {
-      page.url.next ? (
-        <a href={page.url.next} class="btn btn-ghost my-10 mx-5">
-          Older Posts{" "}
-          <svg
-            class="h-6 w-6 fill-current md:h-8 md:w-8"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            {" "}
-            <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-          </svg>
-        </a>
-      ) : (
-        <div />
-      )
-    }
+    {page.url.prev ? (
+      <a href={page.url.prev} class="btn btn-ghost my-10 mx-5">
+        <svg
+          class="h-6 w-6 fill-current md:h-8 md:w-8"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
+        </svg>{" "}
+        Recent posts
+      </a>
+    ) : (
+      <div />
+    )}
+
+    {page.url.next ? (
+      <a href={page.url.next} class="btn btn-ghost my-10 mx-5">
+        Older Posts{" "}
+        <svg
+          class="h-6 w-6 fill-current md:h-8 md:w-8"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+        </svg>
+      </a>
+    ) : (
+      <div />
+    )}
   </div>
 </BaseLayout>

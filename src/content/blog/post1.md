@@ -1,56 +1,23 @@
 ---
-title: "Demo Post 1"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-pubDate: "Sep 10 2022"
-heroImage: "/post_img.webp"
-tags: ["tokio"]
+title: "About me"
+description: "Read to know more about me, my not-so-misadventure into academia, and my whirlwind of a journey into the field of computational social choice."
+pubDate: "Oct 06 2025"
+heroImage: "/about_me.jpg"
+tags: ["About me"]
+pinned: true
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer
-malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas
-pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse
-platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada
-fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea
-dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst
-quisque sagittis purus sit amet.
+For the longest time, I was remarkably indifferent to any career paths. That changed rather abruptly around 11th grade. With mounting expectations to pursue a career in medicine, I realized I didn’t actually want to. At the time, I told everyone it was because I couldn’t handle the gore, but in retrospect, I think it had more to do with my instinctive resistance to being pushed into things.
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum
-quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet.
-Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus.
-Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit
-ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt
-dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus
-arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed
-tempus urna et pharetra pharetra massa massa ultricies mi.
+That decision led me toward research and academia. It felt like a way to reclaim agency over what I wanted to do with my life, and the idea of earning a “Dr.” title through a PhD helped me reassure my family that it was still a respectable pursuit. In my senior secondary years, I studied physics, chemistry, mathematics, and biology. Math fascinated me with its logic, problem-solving, and the way it forced me to think rigorously. Biology, on the other hand, came naturally and easily, and a chapter on biotechnology fascinated me. It was the closest thing to ‘pop science’ in the syllabus, and the naïve dream of curing cancer made it feel meaningful.
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam
-sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec.
-Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna
-fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et
-egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel
-turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra
-nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim
-praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus
-egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam
-ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor
-purus non. Amet dictum sit amet justo donec enim.
+For higher education, I initially joined NISER Bhubaneswar and, two months later, transferred to IISER Pune to focus on biology, as it was one of the best places in the country for studying the subject. Over the next three years, I took the full spectrum of courses in the sciences and humanities. I loved mathematics, but struggled in exams despite putting in immense effort. Biology felt less engaging, yet I performed well with minimal preparation. Somewhere between trying to reconcile these differences, I realized two things- I genuinely enjoyed the academic process, and I was deeply drawn to the analytical, reasoning-driven aspects of problem-solving, rather than the empirical or experimental ones.
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut
-consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra.
-Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor
-dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor
-dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque
-eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices
-tincidunt arcu. Id cursus metus aliquam eleifend mi.
+Humanities courses—especially economics, development studies, and public policy made me think about systems, equity, and how collective decisions shape society. I’ve always been motivated by the idea of contributing to the public good, and these subjects provided a framework for that drive.
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus
-imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu
-cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt
-dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat
-sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida.
-Egestas integer eget aliquet nibh praesent tristique magna.
+Near the end of my third year, by pure chance, I discovered computational social choice, a field that tastefully combined my interests in mathematics, economics, and social decision-making. I spent months reading papers, reaching out to researchers, and attending every summer and winter school I could find on algorithms, game theory, and theoretical computer science.
+
+Eventually, I began working on my master’s thesis under the guidance of Professors Siddharth Barman, Erel Segal-Halevi, and Hadi Hosseini, focusing on problems in fair division, a widely studied topic in computational social choice. 
+
+Looking ahead, I intend to pursue a PhD in computational social choice, with a focus on multi-agent decision-making processes and applications, especially in participatory budgeting and other democratic mechanisms. My long-term goal is to help design systems and policies that make collective decision-making not only efficient but genuinely fair.
+
